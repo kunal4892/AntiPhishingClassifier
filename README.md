@@ -1,11 +1,11 @@
 # AntiPhishingClassifier
 Classifier for segregating Phishing websites from legitimate websites.
 
-#Team Members:
-Noopur Rajesh Kumar Kalawatia
-Harshit Agrawal
-Kumar Kunal
-Richa Singh
+# Team Members:
+* Noopur Rajesh Kumar Kalawatia
+* Harshit Agrawal
+* Kumar Kunal
+* Richa Singh
 
 # Description
 The project aims to take different approcches to mine associative rules from a list of comprehnsive datasets.
