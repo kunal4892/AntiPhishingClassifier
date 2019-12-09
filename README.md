@@ -2,10 +2,10 @@
 Classifier for segregating Phishing websites from legitimate websites.
 
 # Team Members:
-* Noopur Rajesh Kumar Kalawatia
-* Harshit Agrawal
-* Kumar Kunal
-* Richa Singh
+* Noopur Rajesh Kumar Kalawatia(1980 9834)
+* Harshit Agrawal(9041 1685)
+* Kumar Kunal(5100 5964)
+* Richa Singh(5400 5135)
 
 # Description
 The project aims to take different approcches to mine associative rules from a list of comprehensive datasets.
@@ -39,14 +39,24 @@ We use acuuracy scores finally beacause the dataset is very well balanced in bot
 
 ## Description of various modules
 
-* Data Visualization : Please find the notebook in the DataVisualization sub - directory. The .ipynb file details the visualization of the features considered for the training of the models. Preprocessed data is going to considered as the input and the visualization of the same is accomplished. Also find the images of each visualization in the same directory.
+* Data Visualization : Please find the notebook in the DataVisualization sub-directory. The .ipynb file details the visualization of the features considered for the training of the models. Preprocessed data is going to considered as the input and the visualization of the same is accomplished. Also find the images of each visualization in the same directory.
 
-* Data Preprocessing : In order to accomplish this we have used the whois tool in order to gain the domain information of the URLs in our dataset. Please find the necessary code in the sub-directory DataCleaning. The same was used on the EMR cluster.
+* Data Preprocessing : In order to accomplish this we have used the whois tool in order to gain the domain information of the URLs in our dataset. Please find the necessary code in the sub-directory DataCleaning. The same was used on the EMR cluster. The .ipynb file here was run on various data splits by all the team members on Amazon EC2 instances. The final dataset can be found in featureset/combined_dataset.csv
 
-* Model Training : The code to implement the various classifiers can be found in the sub-directory - Classiifers. The .ipynb file consists of the logic to implement the same and the visulization of the results.Please find the final accuracies here. 
+* Model Training : The code to implement the various classifiers can be found in the sub-directory - Classiifers. The .ipynb file consists of the logic to implement the 10-fold cross-validations. The visulization of the results and the net accuracies are also present in the .ipynb file.
+The result after cross-validations are stored in result/Basic_Classifier.html for viewing.
+The models are saved in model_dump/*.sav for predicting if a URL is a spam or not, later on. The model with the higest accuracy is random forest with an accuracty of 95%. K-Nearest Neighbors also gives a very close accuracy.
 
-* Tkinter : In order to run the UI based phishing website detector, please find the python script in the sub-directory - UI.
-            In order to run the same, please find the command below,
+* Tkinter : We used tkinter for creating a UI application. You might have to install the package.
+
+```
+  on mac: 
+  brew install tcl-tk
+```
+
+Please find the python script in the sub-directory - UI.
+In order to run the same, use the command below
+
 ```
   python3 ui.py
 ```
