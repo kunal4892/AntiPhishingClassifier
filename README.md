@@ -60,7 +60,10 @@ In order to run the same, use the command below
 ```
   python3 ui.py
 ```
+The UI application loads the previously trained models while running cross validations. The input is just a string URL.
+The script breaks down the URL into various features and uses the predict to report the result as "Spam URL"/ "Valid URL".
 
-Additionally, please find our dataset on our repo at featureset/combined_dataset.csv
+The final dataset on our repo at featureset/combined_dataset.csv
+
 and on Kaggle at - https://www.kaggle.com/kunal4892/phishingandlegitimateurls
 
