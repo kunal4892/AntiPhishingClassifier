@@ -75,10 +75,18 @@ def button_handler():
     first["activeDuration"]=activeDuration
     check_phish(first)
 def check_phish(first):
+
      print(first)
-     persistent_data = pickle.load('../Model_dump/Random Forest.sav')
-     
-     tkinter.Label(window, text = input_text.get()).pack()
+     first = first[['ranking','isIp','valid','activeDuration','urlLen','is@','isredirect','haveDash','domainLen','nosOfSubdomain']]
+     with open('../model_dump/RandomForest.sav', 'rb') as pickle_file:
+      persistent_data = pickle.load(pickle_file)
+      print("------------\n")
+      result = persistent_data.predict(first) 
+      print(result)    
+      if result[0] == 0:
+        tkinter.Label(window,font = ('arial', 18, 'bold'),fg = "green", text =input_text.get() + " is a valid URL").pack()
+      else:
+        tkinter.Label(window,font = ('arial', 18, 'bold'),fg = "red", text =input_text.get()+ " is a spam URL").pack()
 input_frame = Frame(window, width = 312, height = 50, bd = 0, highlightbackground = "black", highlightcolor = "black", highlightthickness = 1)
 input_frame.pack(side = TOP)
 
