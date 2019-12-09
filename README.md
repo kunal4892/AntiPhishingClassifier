@@ -35,10 +35,5 @@ are for all the different models and hints at whether the selected features need
 be refined/rethought for more effective training. We expect to demonstrate this by
 showing the feature separation using different plots.
 
-The metric used for analysing the performance is F1-score.
-This mitigates the problems imposed by "accuracy" for imbalanced datasets.
-
-Finally, the project uses bagging and boosting techniqiues over the best performing models
-to tweak and boost the performance. We report the best performing models with their individual
-scores with the combined F1- score and report the increase in efficiency, if any.
-
+Though the metric initially decided to be used for analysing the performance was F1-score.
+We use acuuracy scores finally beacause the dataset is very well balanced in both the categories.
