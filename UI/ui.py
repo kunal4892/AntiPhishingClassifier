@@ -3,6 +3,7 @@ from tkinter import *
 import tkinter
 import pandas as pd
 import whois
+import pickle
 window = tkinter.Tk()
 window.geometry("512x524") # size of the window width:- 500, height:- 375
 window.resizable(0, 0) # this prevents from resizing the window
@@ -75,6 +76,8 @@ def button_handler():
     check_phish(first)
 def check_phish(first):
      print(first)
+     persistent_data = pickle.load('../Model_dump/Random Forest.sav')
+     
      tkinter.Label(window, text = input_text.get()).pack()
 input_frame = Frame(window, width = 312, height = 50, bd = 0, highlightbackground = "black", highlightcolor = "black", highlightthickness = 1)
 input_frame.pack(side = TOP)
