@@ -16,7 +16,6 @@ The following Supervised learning models are used with K-fold validations:
 * K Nearest Neighbors
 * Decision Tree
 * Random Forest
-* AdaBoost
 
 The dataset is segregated into training and testing datasets.
 The training dataset is used to perform k-fold validations over 
